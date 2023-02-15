@@ -12,11 +12,12 @@ from dash import dcc, html, callback, Output
 import pathlib
 
 # load the data ------------------------------------------------------------------------
-PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../tree/main/data").resolve()
+url="https://github.com/Datascientist88/Art_Of-_Data_Visualization_Project_two/blob/main/data/unemplo_figures_1991.xlsx"
+# PATH = pathlib.Path(__file__).parent
+# DATA_PATH = PATH.joinpath("../tree/main/data").resolve()
 
 
-df=pd.read_excel(DATA_PATH.joinpath("unemplo_figures_1991.xlsx"))
+df=pd.read_excel(url,engine="openpyxl")
 
 YEARS=[2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
        2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,

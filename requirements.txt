@@ -4,6 +4,7 @@ numpy
 pandas
 plotly
 plotly_express
+openpyxl
 
 gunicorn 
 

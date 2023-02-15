@@ -13,7 +13,7 @@ import pathlib
 
 # load the data ------------------------------------------------------------------------
 PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../data").resolve()
+DATA_PATH = PATH.joinpath("../tree/main/data").resolve()
 
 
 df=pd.read_excel(DATA_PATH.joinpath("unemplo_figures_1991.xlsx"))

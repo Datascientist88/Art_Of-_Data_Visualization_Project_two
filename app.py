@@ -11,7 +11,7 @@ from plotly.subplots import make_subplots
 from dash import dcc, html, callback, Output
 from pathlib import Path
 # load the data ------------------------------------------------------------------------
-path=Path("https://github.com/Datascientist88/Art_Of-_Data_Visualization_Project_two/tree/main/data")/"unemplo_figures_1991.xlsx"
+path=Path("main/data")/"unemplo_figures_1991.xlsx"
 df=pd.read_excel(path)
 
 YEARS=[2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,

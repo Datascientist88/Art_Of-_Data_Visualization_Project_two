@@ -4,7 +4,7 @@ numpy
 pandas
 plotly
 plotly_express
-openpyxl
+openpyxl==3.1.0
 
 gunicorn 
 

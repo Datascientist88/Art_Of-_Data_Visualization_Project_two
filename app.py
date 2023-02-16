@@ -14,13 +14,10 @@ import os
 
 # load the data ------------------------------------------------------------------------
 
-APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-# PATH = pathlib.Path(__file__).parent
-# DATA_PATH = PATH.joinpath("../data").resolve()
 
-
-
-df= pd.read_excel(os.path.join(APP_PATH, os.path.join("data", "unemplo_figures_1991.xlsx")))
+PATH = pathlib.Path(__file__).parent
+DATA_PATH = PATH.joinpath("./data").resolve()
+df= pd.read_excel(DATA_PATH.joinpath("unemplo_figures_1991.xlsx")
 
 YEARS=[2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
        2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,

@@ -10,13 +10,20 @@ import plotly_express as px
 from plotly.subplots import make_subplots
 from dash import dcc, html, callback, Output
 import pathlib
+import os 
 
 # load the data ------------------------------------------------------------------------
-PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../main/data").resolve()
+
+APP_PATH = str(pathlib.Path(__file__).parent.resolve())
+# PATH = pathlib.Path(__file__).parent
+# DATA_PATH = PATH.joinpath("../data").resolve()
 
 
-df=pd.read_excel(DATA_PATH.joinpath("unemplo_figures_1991.xlsx"))
+
+df= pd.read_excel(
+    os.path.join(
+        APP_PATH, os.path.join("data", "unemplo_figures_1991.xlsx")
+    )
 
 YEARS=[2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
        2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,
@@ -136,9 +143,9 @@ def update_marquee(clickdata,years):
         filtered_df=filtered_df[filtered_df['Countrycode']==points]
         clickedcountry=filtered_df.Country.unique()[0]
         unemploymentclickedcountry=round(filtered_df['Unemployment'].mean(),0)
-        return dbc.Row( html.Marquee(f"Average Annual Unemployment Rate in { clickedcountry} is {unemploymentclickedcountry} % 🌍 🌍  Please Click on Any Country on the Map to Gain Insight about Unemployment   🌍 Unemployment Rates Worldwide Since 1991  🌍 Bahageel Dashboard 🌍Data Compiled from  The World Bank  🌍 Top 10 Countries With Highest Average Annual Unemployment Rates are : 🌍 North Macedonia -30%  🌍  Lesotho -29%  🌍 South Africa -28%  🌍  Djibouti-27%  🌍 Bosnia Herzegovia -25%  🌍 Estwatini -25%  🌍 Montenegro-22%  🌍 Namibia-21%  🌍 Democratic Republic Of Congo -20%  🌍 West Bank and Gaza -20% "), style = {'color':'red'})
+        return dbc.Row( html.Marquee(f"Average Annual Unemployment Rate in { clickedcountry} is {unemploymentclickedcountry} % 🌍 🌍  Please Click on Any Country on the Map to Gain Insight about Unemployment   🌍 Unemployment Rates Worldwide Since 1991  🌍 Bahageel Dashboard 🌍Data Compiled from  The World Bank  🌍 Top 10 Countries With Highest Average Annual Unemployment Rates are : 🌍 North Macedonia -30%  🌍  Lesotho -29%  🌍 South Africa -28%  🌍  Djibouti-27%  🌍 Bosnia Herzegovia -25%  🌍 Estwatini -25%  🌍 Montenegro-22%  🌍 Namibia-21%  🌍 Democratic Republic Of Congo -20%  🌍 West Bank and Gaza -20% "), style = {'color':'cyan'})
     else:
-        return dbc.Row( html.Marquee("Pleasee Click on Any Country on the Map to Gain Insight about Unemployment Rate Countrywise-  🌍🌍-The Figures are provided By  The World Bank 🌍 Top 10 Countries With Highest Average Annual Unemployment Rates are : 🌍 North Macedonia -30%  🌍  Lesotho -29%  🌍 South Africa -28%  🌍  Djibouti-27%  🌍 Bosnia Herzegovia -25%  🌍 Estwatini -25%  🌍 Montenegro-22%  🌍 Namibia-21%  🌍 Democratic Republic Of Congo -20%  🌍 West Bank and Gaza -20% "), style = {'color':'cyan'})
+        return dbc.Row( html.Marquee("Pleasee Click on Any Country on the Map to Gain Insight about Unemployment Rate Countrywise-  🌍🌍-The Figures are provided By  The World Bank 🌍 Top 10 Countries With Highest Average Annual Unemployment Rates are : 🌍 North Macedonia -30%  🌍  Lesotho -29%  🌍 South Africa -28%  🌍  Djibouti-27%  🌍 Bosnia Herzegovia -25%  🌍 Estwatini -25%  🌍 Montenegro-22%  🌍 Namibia-21%  🌍 Democratic Republic Of Congo -20%  🌍 West Bank and Gaza -20% "), style = {'color':'red'})
 
 
 

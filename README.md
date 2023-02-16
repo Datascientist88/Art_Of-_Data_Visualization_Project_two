@@ -1,7 +1,7 @@
 
 # Art_Of-_Data_Visualization_Project_two
 ### To Access the project [Click here!](https://data-visualization-unemployment-dashboard.onrender.com/)
-<p><img align="center" alt="jpg" src="https://user-images.githubusercontent.com/119727641/219349155-f69da039-0ffd-499e-aa71-df45fad6c781.jpg" width="1200" height="600" /></p>
+<p><img align="center" alt="jpg" src="https://user-images.githubusercontent.com/119727641/219349155-f69da039-0ffd-499e-aa71-df45fad6c781.jpg" width="1500" height="600" /></p>
 
 
 # The Art of Data Visualization

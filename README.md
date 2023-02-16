@@ -1,5 +1,8 @@
+
 # Art_Of-_Data_Visualization_Project_two
 ### To Access the project [Click here!](https://data-visualization-unemployment-dashboard.onrender.com/)
+<p><img align="center" alt="gif" src="https://user-images.githubusercontent.com/119727641/219315695-0f75fff2-c8a3-4d80-a130-cc2483b91e16.gif" width="1000" height="600" /></p>
+
 
 # The Art of Data Visualization
 The ability to create eye-catching visuals is not an inherited skill. The skills required for most effectively displaying information are not intuitive and rely largely on principles that can be learned. There are, indeed, some visualization techniques that are best left to designers, but there are others, e.g., audit findings, key performance indicators (KPIs) and cyber-monitoring indicators, that do not need the designer’s touch.

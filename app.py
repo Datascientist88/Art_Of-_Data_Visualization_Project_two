@@ -123,6 +123,7 @@ def update_line_chart(clickdata,years):
         fig5.update_traces(xaxis='x2' )
         return dcc.Graph(figure=fig5)
     
+    
 @app.callback(
     Output('marquee','children'),
     [Input('map','clickData')],

@@ -99,7 +99,7 @@ def update_line_chart(clickdata,years):
 
         fig4.add_trace(go.Bar( x=filtered_df['Year'],y=filtered_df['AnnualChange'],marker_color=filtered_df['Color'],name='change%'),row=2,col=1,secondary_y=False)
         fig4.update_layout(title=f"Unemployment Rate in {clickedcountry}  Since {year_0}",xaxis=dict(showgrid=False),yaxis=dict(showgrid=False),
-                        hovermode='x unified', plot_bgcolor='#000000',paper_bgcolor='#000000' ,showlegend=False,height=600,width=1000)
+                        hovermode='x unified', plot_bgcolor='#000000',paper_bgcolor='#000000' ,showlegend=False,height=600)
         fig4.update_traces(xaxis='x2' )
         return dcc.Graph(figure=fig4)
     else:
